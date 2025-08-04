@@ -1,9 +1,10 @@
+
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class ExampleService {
-  constructor(private configService: ConfigService) {}
+  constructor(private configService: ConfigService) { }
 
   getAppInfo() {
     // Method 1: Using the registered config namespace
