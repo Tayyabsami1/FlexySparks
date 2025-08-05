@@ -14,9 +14,10 @@ import { ConfigService } from "@nestjs/config";
                 database: config.get('DB_NAME'),
                 autoLoadEntities: true,
                 synchronize: true, // Set to false in production
-            }),
-    ]
-    ,
+                autoCreateDatabase: true, // Automatically create the database if it doesn't exist
+            })
+        }),
+    ],
     controllers: [],
     providers: [],
     exports: [],
